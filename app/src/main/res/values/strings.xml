@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVC</string>
+    <string name="username">username</string>
+    <string name="fetch_with_data">Fetch With data</string>
+    <string name="date">5 /1 /2023</string>
+    <string name="content">Content</string>
+</resources>
