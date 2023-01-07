@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.currentUser.name}"
+            tools:text="@string/username"
             android:layout_margin="@dimen/margin_medium"
             android:textSize="@dimen/text_medium"
             android:textStyle="bold"
@@ -32,16 +33,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fetch_with_data"
+            android:onClick="@{() -> viewModel.getAWisdom() }"
             app:layout_constraintTop_toBottomOf="@+id/text_username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/margin_medium" />
+            android:layout_marginTop="@dimen/margin_medium"
+            />
 
         <TextView
             android:id="@+id/text_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.wisdom.publishDate}"
+            tools:text="@string/date"
             app:layout_constraintTop_toBottomOf="@+id/button_fetch"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="@dimen/margin_medium"
@@ -52,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{viewModel.wisdom.content}"
+            tools:text="@string/content"
             android:textSize="@dimen/text_normal"
             app:layout_constraintTop_toBottomOf="@+id/text_date"
             app:layout_constraintStart_toStartOf="parent"

@@ -10,4 +10,6 @@ class Repository {
 
     fun getCurrentUser() = database.getCurrentUser()
     fun getRandomWisdom() = api.getRandomWisdom()
+
+    fun getRxRandomWisdom() = api.getRxRandomWisdom()
 }

@@ -13,36 +13,34 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this , R.layout.activity_main)
-
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-        setup()
+
     }
 
-
-    private fun setup() {
-        viewModel.getUserInfo()
-        binding.buttonFetch.setOnClickListener {
-            viewModel.getAWisdom()
-        }
-
-
-        // I replaced this code by dataBinding
-//        viewModel.currentUser.observe(this){
-//            binding.textUsername.text = it.name
-//        }
-
-//        viewModel.wisdom.observe(this){
-//            binding.apply {
-//                textDate.text = it.publishDate
-//                textContent.text = it.content
-//            }
-//        }
-    }
+// I replaced all this function by DataBinding Features
+//    private fun setup() {
+////        viewModel.getUserInfo()
+////        binding.buttonFetch.setOnClickListener {
+////            viewModel.getAWisdom()
+////        }
+//
+//
+//        // I replaced this code by dataBinding
+////        viewModel.currentUser.observe(this){
+////            binding.textUsername.text = it.name
+////        }
+//
+////        viewModel.wisdom.observe(this){
+////            binding.apply {
+////                textDate.text = it.publishDate
+////                textContent.text = it.content
+////            }
+////        }
+//    }
 
 
 
