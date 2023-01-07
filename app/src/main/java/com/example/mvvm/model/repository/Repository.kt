@@ -9,7 +9,7 @@ class Repository {
     private val database = FakeDatabase()
 
     fun getCurrentUser() = database.getCurrentUser()
-    fun getRandomWisdom() = api.getRandomWisdom()
+    suspend fun getRandomWisdom() = api.getRandomWisdom()
 
     fun getRxRandomWisdom() = api.getRxRandomWisdom()
 }
