@@ -16,7 +16,7 @@ class FakeApiService {
 
     suspend fun getRandomWisdom():Wisdom{
         val random = (Math.random() * wisdomList.size) .toInt()
-        delay(5000)
+        delay(1000)
         return wisdomList[random]
     }
 
